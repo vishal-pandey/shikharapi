@@ -13,7 +13,7 @@
 		// echo "success";
 		$dir = "../resume/";
 		$target_file = $dir.$resume;
-		if(move_uploaded_file($_FILES["photo"]["tmp_name"], $target_file)){
+		if(move_uploaded_file($_FILES["resume"]["tmp_name"], $target_file)){
 			echo "success";
 		}else{
 			echo $target_file;
