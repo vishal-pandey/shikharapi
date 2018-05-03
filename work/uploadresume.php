@@ -6,18 +6,17 @@
 	$email = $_POST['email'];
 	// $resume = $_POST['resume'];
 	$resume = $_FILES['resume']['name'];
+	$resumelink = "https:shikharapi.vishalpandey.xyz/resume/".$resume;
 
-	$sql = "insert into resume values ('{$fname}' , '{$lname}', '{$email}')";
+	$sql = "insert into resume values ('{$fname}' , '{$lname}', '{$email}', '{$resumelink}')";
 
-	if($conn->query($sql)){
-		// echo "success";
-		$dir = "../resume/";
-		$target_file = $dir.$resume;
-		if(move_uploaded_file($_FILES["resume"]["tmp_name"], $target_file)){
+
+
+	$dir = "../resume/";
+	$target_file = $dir.$resume;
+	if(move_uploaded_file($_FILES["resume"]["tmp_name"], $target_file)){
+		if($conn->query($sql)){
 			echo "success";
-		}else{
-			echo $target_file;
-			echo "Resume Name".$resume;
 		}
 	}
 

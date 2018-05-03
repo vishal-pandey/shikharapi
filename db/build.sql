@@ -1,1 +1,1 @@
-create table resume (fname text, lname text, email text);
+create table resume (fname text, lname text, email text, resumelink text);
