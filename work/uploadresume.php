@@ -17,6 +17,7 @@
 			echo "success";
 		}else{
 			echo $target_file;
+			echo "Resume Name".$resume;
 		}
 	}
 
