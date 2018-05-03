@@ -14,7 +14,17 @@
 
 	$dir = "../resume/";
 	$target_file = $dir.$resume;
-	if(move_uploaded_file($_FILES["resume"]["tmp_name"], $target_file)){
+
+
+	if ($fname ='') {
+		echo "Please Enter First Name";
+	}else if ($lname = '') {
+		echo "Please Enter Last Name";
+	}elseif ($email = '') {
+		echo "Please Enter Email";
+	}else if ($resume = '') {
+		echo "Please select a resume file";
+	}else if(move_uploaded_file($_FILES["resume"]["tmp_name"], $target_file)){
 		if($conn->query($sql)){
 			echo "success";
 		}
