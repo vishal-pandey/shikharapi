@@ -6,7 +6,7 @@
 	$email = $_POST['email'];
 	// $resume = $_POST['resume'];
 	$resume = $_FILES['resume']['name'];
-	$resumelink = "https:shikharapi.vishalpandey.xyz/resume/".$resume;
+	$resumelink = "https://shikharapi.vishalpandey.xyz/resume/".$resume;
 
 	$sql = "insert into resume values ('{$fname}' , '{$lname}', '{$email}', '{$resumelink}')";
 
